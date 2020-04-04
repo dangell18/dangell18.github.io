@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to MadLibs!!</title>
+    <link rel="stylesheet" href="DynamJs.css">
+
+    <!--sets the class to color and multi which allows for the color animation -->
+    <div class="color">
+        <h1 class="multi">   
+            Welcome to MadLibs!!
+        </h1>
+      </div>
+    <!--Write story form takes user input and incorporates it into the story while filling in the rest.-->
+    <script>
+        function writeStory(form){
+            form.story.value = ("Today I went to the zoo. I saw a(n) " + form.adjective.value + " " + form.noun.value + 
+            " jumping up and down in its tree. He " + form.pastTenseVerb.value + " " + form.adverb.value + " through the large tunnel that led to its "
+            + form.adjectiveSecond.value + " " + form.nounSecond.value + ". I got some peanuts and passed them though the cage to a gigantic gray "
+            + form.nounThird.value + " towering above my head. Feeding the animal made me hungry. I wen to get a "  + form.adjectiveThird.value +
+            " scoop of ice cream. It filled my stomach. Afterwards I had to  " + form.verb.value + " " + form.adverbSecond.value + 
+            " to catch our bus. When I got home I " + form.pastTenseVerbSecond.value + " my mom for a " + form.adjectiveFourth.value + 
+            " day at the zoo. A story created by " + form.firstName.value + " " + form.lastName.value);
+           } 
+    /*This form sets the values of the story and title back to nothing*/
+        function resetAll(form){
+           form.story.value = "";
+           form.title.value = "";
+           }
+     /* This function sets all the user inputs back to blank to allow user to re write*/   
+        function resetInfo(form){
+            form.firstName.value = "";
+            form.lastName.value = "";
+            form.adjective.value = "";
+            form.noun.value = "";
+            form.pastTenseVerb.value = "";
+            form.adverb.value = "";
+            form.adjectiveSecond.value = "";
+            form.nounSecond.value = "";
+            form.nounThird.value = "";
+            form.adjectiveThird.value = "";
+            form.verb.value = "";
+            form.adverbSecond.value = "";
+            form.pastTenseVerbSecond.value = "";
+            form.adjectiveFourth.value = "";
+        } 
+        </script>
+        
+</head>
+<body>
+    <marquee>Fill in each box with something funny or something serious. The choice is yours! Then click &quot;Write Story.&quot;</marquee >
+        
+        <form>
+            <!-- Creates the buttons used -->
+        <div><center>
+            <input type="button" value="Write Story" class="button" onclick="writeStory(this.form)">
+            <input type="button" value="Erase Data" class="button" onclick="resetInfo(this.form)">
+            <input type="button" value="Delete Story" class="button" onclick="resetAll(this.form)">
+            </center>
+        </div> 
+        <!-- Creates table for user inputs -->
+          <div align="center" class="table"><center><table>
+            <tr>
+                <td align= "right">First name:</td>
+                <td>
+                    <input type="text" name="firstName" size="12"></td>
+                <td></td>
+                <td align= "right">Last name:</td>
+                <td>
+                    <input type="text" name="lastName" size="12">
+                </td>
+            </tr>
+            <tr>
+                <td align= "right">Adjective:</td>
+                <td>
+                    <input type="text" name="adjective" size="12">
+                </td>
+                <td></td>
+                <td align= "right">Noun:</td>
+                <td>
+                    <input type="text" name="noun" size="12">
+                </td>
+            </tr>
+            <tr>
+                <td align= "right">Past tense verb:</td>
+                <td>
+                    <input type="text" name="pastTenseVerb" size="12">
+                </td>
+                <td></td>
+                <td align= "right">Adverb:</td>
+                <td>
+                    <input type="text" name="adverb" size="12">
+                </td>
+            </tr>
+            <tr>
+                <td align= "right">Adjective:</td>
+                <td>
+                    <input type="text" name="adjectiveSecond" size="12">
+                </td>
+                <td></td>
+                <td align= "right">Noun:</td>
+                <td>
+                    <input type="text" name="nounSecond" size="12">
+                </td>
+            </tr>
+            <tr>
+                <td align= "right">Noun:</td>
+                <td><input type="text" name="nounThird" size="12"></td>
+                <td></td>
+                <td align= "right">Adjective:</td>
+                <td><input type="text" name="adjectiveThird" size="12"></td>
+            </tr>
+            <tr>
+                <td align= "right">Verb:</td>
+                <td>
+                    <input type="text" name="verb" size="12">
+                </td>
+                <td></td>
+                <td align= "right">Adverb:</td>
+                <td>
+                    <input type="text" name="adverbSecond" size="12">
+                </td>
+            </tr>
+            <tr>
+                <td align= "right">Past tense verb:</td>
+                <td>
+                    <input type="text" name="pastTenseVerbSecond" size="12">
+                </td>
+                <td></td>
+                <td align= "right">Adjective:</td>
+                <td>
+                    <input type="text" name="adjectiveFourth" size="12">
+                </td>
+            </tr>
+          </table>
+          </center>
+        </div>
+
+        <div align="center">
+            <center>
+                <p>
+                    <textarea cols="90" rows="9" name="story" wrap="virtual"></textarea> 
+            </p>
+            </center>
+        </div> 
+    </form>
+</body>
+</html>
