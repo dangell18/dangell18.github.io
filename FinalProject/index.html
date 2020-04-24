@@ -1,1 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> 304 Final Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen" href="FinalCSS.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</head>
 
+<body>
+    <section>
+        <header>
+            <div class="navbar">
+                <a href="#FreGer">French & German</a>
+                <a href="#BriIri">British & Irish</a>
+                <a href="#ImgSearch">More Info</a>
+            </div>
+        </header>
+    </section>
+
+    <h1>
+        Welcome to my Ancestory!!
+    </h1>
+    
+    <div class="into">
+        <p>
+            Recently I have learned more about my ancestory and where I come from and I would 
+            love it if you came on the journey with me! Below is a graph breaking down all the 
+            places that make up who I am. Feel free to scroll through and learn a little more about 
+            the larger groupings.
+        </p>
+    </div>
+
+    <br><br>
+
+    <canvas id="myChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script>
+        
+        //Sets the defaults for the chart
+        Chart.defaults.globalFontFamily = "Lato";
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = 'black';
+
+       var ctx = document.getElementById('myChart').getContext('2d');
+       //Resizes the chart so it isnt the entire page
+       ctx.canvas.width = 300; 
+       ctx.canvas.height = 100;
+      
+       //Makes the chart of type bar
+        var chart = new Chart(ctx, {
+    
+            type: 'bar',
+
+            //Creates the labels and inserts the data for each one
+            data: {
+                labels: ['French & German', 'British & Irish', 'Northwestern European', 'Scandinavian', 
+                'Eastern European', 'Southern European', 'Italian', 'Greek'],
+                datasets: [{
+                    label: "Percentage of ancestory",
+                    backgroundColor: ['blue', 'purple', 'blue', 'purple', 'blue', 'purple', 'blue', 'purple'],
+                    borderColor: 'white',
+                    data: [37.3, 27.9, 17.6, 5, 5.6, 3.5, 2, 1.1]
+                }]
+
+                
+            },
+    //Adjusts viewing options of the chart
+    options: {
+        padding:{
+            left: 50,
+            right: 0,
+            bottom: 0,
+            top: 0
+        }
+    }
+});
+    </script>
+
+    <br><br>
+
+    <h3 id="FreGer">
+        French & German
+    </h3>
+
+    <div class="home">
+        <p>
+            “French and German” people descend from ancient Alpine-Celtic and Germanic populations, 
+            and inhabit an area extending from the Netherlands to Austria – roughly corresponding to 
+            the extent of Charlemagne’s Frankish Kingdom in the Middle Ages. Estimates place Charlemagne 
+            himself in the family trees of all modern Europeans, possibly many times over. Genetically and 
+            geographically, the French and Germans are at the heart of Europe.<br><br>
+
+            French & German people have lived at a crossroads in human migration for millennia, and their 
+            genetics reflect that history. Celtic languages and culture first appeared in Central Europe, 
+            extending from the British Isles to the Black sea by the 3rd century BCE. But the rise of 
+            the Roman Empire spelled the downfall of a Celtic-speaking Europe, and today, Celtic languages 
+            can only be found along the far western periphery of their former territory.<br><br>
+
+            With the Western Roman Empire in decline, Germanic tribes conquered vast territories from the 
+            North Sea to North Africa. Although Germanic languages did not replace the Latin-based languages 
+            spoken in what is now France and Belgium, recent studies found evidence that the migrations of 
+            Germanic peoples from the 4th to the 6th centuries had a more significant impact on Europe’s 
+            DNA than did the earlier expansion of the Roman Empire.
+        </p>    
+    </div>
+
+    <img src="https://permalinks.23andme.com/you/img/population_pages/french_german/french_german_edu1_2x.png" alt="map" height="400" width="800" class="img">
+    <img src="https://permalinks.23andme.com/you/img/population_pages/french_german/french_german_edu5_2x.png" alt="map" height="400" width="800" class="img">
+    <br><br>
+
+    <h3 id="BriIri">
+        British & Irish
+    </h3>
+
+    <div class="home">
+        <p>
+            The British Isles have been continuously occupied by humans for the last 11,000 years, but more 
+            recently, the people of the Isles have left their genetic fingerprints around the world, following 
+            centuries of nautical exploration, colonization, and immigration. In the early 20th century, the 
+            Republic of Ireland won its independence from the United Kingdom, but the people of these nations 
+            share a common genetic heritage rooted largely in Celtic, Anglo-Saxon, and Viking migrations from 
+            northwestern Europe.<br><br>
+
+            In a recent landmark project (called “People of the British Isles”), researchers identified a number 
+            of distinct genetic clusters within the United Kingdom and the Republic of Ireland, all strongly 
+            correlated with regional borders. As the researchers increased the resolution of their analysis, 
+            the first unique cluster to separate from the rest of the UK was the Orkney Islands off the 
+            northeastern coast of Scotland, followed by Wales. At a much higher resolution, the study was able 
+            to uncover a genetic boundary between neighboring Cornwall and Devon in the southwestern tip of 
+            England (which may come as no surprise to the people of these counties, who observe radically 
+            different culinary routines: in Devon, clotted cream is applied to scones first, before the jam. 
+            In Cornwall, it’s the opposite).
+        </p>
+    </div>
+    <img src="https://permalinks.23andme.com/you/img/population_pages/british_irish/britishirish_edu1_2x.png" alt="map" height="400" width="800" class="img">
+    <br><br>
+    <div id="ImgSearch" class="home">
+        For more info search any of the countries here with this custom Wiki search!
+    </div>
+
+    <script src="FinalJS.js"></script>
+
+    <div class="container">
+        <input id="searchPrompt" name="search" placeholder="Search..">
+        <button id='searchButton' class="button" type="button">Search!</button>
+        <div id="output"></div>
+    </div>
+
+    <br><br><br><br>
+</body>
+</html>
