@@ -1,1 +1,135 @@
+body{
+    background: url("https://starkaerospace.com/wp-content/uploads/2014/06/background-world-map-1.gif");
+    text-align: center;
+    color: #555;
+}
+.navbar{
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
 
+h1{
+    color: maroon;
+}
+
+h3{
+    color: maroon;
+}
+.home{
+    font-size: 20px;
+    text-align: center;
+}
+
+.navbar a{
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 31%; 
+    text-align: center; 
+  }
+
+  .navbar a:hover {
+    background-color: gray;
+  }
+
+.home{
+    text-align: center;
+    padding: 20px;
+    padding-left: 130px;
+    padding-right: 130px;
+    width: 100%;
+}
+
+.into{
+    text-align: center;
+    color:#555;
+    padding-left: 130px;
+    padding-right: 130px;
+    width: 100%;
+    font-weight: bold;
+    
+}
+
+
+input{
+    width:80%;
+}
+.heading{
+    border-radius:25px;
+    margin:1%;
+    padding:1%;
+    display:inline-block;
+    font-family: monospace;
+}
+
+p{
+    padding-bottom: 1%;
+    padding-left:1%;
+    text-align: left;
+    font-size: 23px;
+}
+
+div{
+    border-radius:25px;
+}
+
+input{
+    width:80%;
+}
+.heading{
+    border-radius:25px;
+    margin:1%;
+    padding:1%;
+    display:inline-block;
+    font-family:'monospace';
+}
+  
+div{
+    border-radius:25px;
+}
+  
+#output{
+    margin-top:1%;
+    border-radius:25px;
+    font-family:'monospace';
+    font-size: 15px;
+    display: inline-block;
+}
+
+.button{
+    font-family: monospace;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    outline: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.1s;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.button:active {
+    background-color: green;
+    box-shadow: 0 5px yellowgreen;
+    transform: translateY(12px);
+}
+/*  Sets up the color combo and order for the button animation including position*/
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:orange; left:200px; top:0px;}
+    50%  {background-color:yellow; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:blue; left:0px; top:0px;}
+}
+
+.color {
+    margin: 0 auto;
+    padding: 55px 35px;
+}
