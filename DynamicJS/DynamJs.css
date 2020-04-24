@@ -1,1 +1,99 @@
+head{
+    font:50px;
+    color: lightblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
+body{
+    background: url("https://i.pinimg.com/originals/1e/ef/c5/1eefc5567dc5c55f67ef6849b9235582.jpg");
+    font: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+}
+p{
+    font-style: italic;
+    font-size: 40px;
+}
+
+h1{
+    text-align: center;
+    color: lightblue;
+}
+
+marquee{
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    color:white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.table{
+    font-size: 20px;
+    padding: 15px 25px;
+}
+
+/* Adds the animation timer and style to the button class*/
+.button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    outline: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: all 0.1s;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+
+
+.button:active {
+    background-color: green;
+    box-shadow: 0 5px yellowgreen;
+    transform: translateY(12px);
+}
+/*  Sets up the color combo and order for the button animation including position*/
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:orange; left:200px; top:0px;}
+    50%  {background-color:yellow; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:blue; left:0px; top:0px;}
+}
+
+.color {
+    margin: 0 auto;
+    padding: 55px 35px;
+}
+
+.multi {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+    color:black;
+    font-size:45px;
+    position: absolute;
+    -webkit-animation:colorchange 20s infinite alternate;
+}
+/*  Sets up color combo and order for the main title*/
+  @-webkit-keyframes colorchange {
+    0% {color: red;}
+    10% {color: orange;}
+    20% {color: yellow;}
+    30% {color: green;}
+    40% {color: blue;}
+    50% {color: indigo;}
+    60% {color: violet;}
+    70% {color: red;}
+    80% {color: orange;}
+    90% {color: yellow;}
+    100% {color: green;}
+  }
